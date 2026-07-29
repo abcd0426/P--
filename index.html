@@ -1,38 +1,318 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>海生館親子2天1夜</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#062e46">
+<meta name="description" content="海生館親子2天1夜：新北出發、海生館深度遊、後灣夕陽與海灘戲水。">
+<title>海生館親子 2 天 1 夜｜家庭旅行提案</title>
 <style>
-body{font-family:Arial,sans-serif;max-width:900px;margin:auto;padding:20px;line-height:1.7}
-h1{color:#0077b6}
-.card{background:#f4fbff;border-radius:10px;padding:16px;margin:16px 0}
+:root{
+  --navy:#062e46;--deep:#084f6e;--sea:#0b87a8;--aqua:#4ecdc4;
+  --sand:#fff3d7;--coral:#ff7f6e;--ink:#15313e;--muted:#607986;
+  --paper:#f7fbfc;--white:#fff;--line:#dcebf0;--shadow:0 18px 55px rgba(6,46,70,.13);
+  --radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);background:
+  radial-gradient(circle at 10% 5%,rgba(78,205,196,.18),transparent 26%),
+  linear-gradient(180deg,#eefbff 0,#fff 28%,#f7fbfc 100%);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  line-height:1.65;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+.hero{
+  min-height:690px;position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(145deg,#04283d 0%,#086982 54%,#22a6b3 100%);
+}
+.hero:before,.hero:after{
+  content:"";position:absolute;border-radius:50%;filter:blur(2px);opacity:.3
+}
+.hero:before{width:460px;height:460px;background:#5de0d4;right:-150px;top:-140px}
+.hero:after{width:330px;height:330px;background:#ffcf75;left:-170px;bottom:-170px}
+.wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:95px}
+.nav{
+  position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;
+  padding:20px 0
+}
+.brand{font-weight:900;letter-spacing:.04em;display:flex;gap:10px;align-items:center}
+.brand-icon{width:38px;height:38px;border-radius:13px;background:rgba(255,255,255,.15);display:grid;place-items:center}
+.navlinks{display:flex;gap:22px;font-size:14px;color:rgba(255,255,255,.86)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center;padding:72px 0 145px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.1);font-size:13px;font-weight:800}
+h1{font-size:clamp(42px,6vw,78px);line-height:1.04;margin:22px 0 20px;letter-spacing:-.045em}
+.hero-copy{font-size:18px;color:rgba(255,255,255,.86);max-width:650px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 32px}
+.hero-tags span{padding:9px 13px;border-radius:12px;background:rgba(255,255,255,.12);font-size:14px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:14px;font-weight:850;border:1px solid transparent}
+.btn-primary{background:#fff;color:var(--navy);box-shadow:0 10px 30px rgba(0,0,0,.16)}
+.btn-ghost{border-color:rgba(255,255,255,.36);color:#fff;background:rgba(255,255,255,.08)}
+.trip-card{
+  position:relative;background:rgba(255,255,255,.96);color:var(--ink);padding:24px;border-radius:30px;
+  box-shadow:0 28px 80px rgba(0,0,0,.22);transform:rotate(1.4deg)
+}
+.poster{
+  height:255px;border-radius:22px;overflow:hidden;position:relative;
+  background:
+   radial-gradient(circle at 75% 24%,#ffe9a4 0 5%,transparent 6%),
+   linear-gradient(180deg,#72d9e8 0 52%,#12a0ba 53% 67%,#087b96 68% 100%);
+}
+.poster:before{
+  content:"";position:absolute;left:-6%;right:-6%;bottom:29%;height:52px;
+  background:rgba(255,255,255,.36);border-radius:50%;transform:rotate(-3deg)
+}
+.poster .island{position:absolute;width:300px;height:100px;right:-40px;bottom:45px;background:#0f6d61;border-radius:50% 50% 18% 18%;transform:rotate(-7deg)}
+.poster .fish{position:absolute;font-size:40px;left:20%;top:42%;filter:drop-shadow(0 5px 5px rgba(0,0,0,.15))}
+.poster .sun{position:absolute;right:28px;top:25px;font-size:42px}
+.poster-title{position:absolute;left:20px;bottom:18px;color:#fff;font-size:24px;font-weight:900;text-shadow:0 3px 14px rgba(0,0,0,.3)}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}
+.quick div{background:#eef8fa;border-radius:15px;padding:12px;text-align:center}
+.quick strong{display:block;font-size:17px;color:var(--deep)}
+.quick small{color:var(--muted)}
+.section{padding:72px 0}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}
+.kicker{font-size:13px;font-weight:900;color:var(--sea);letter-spacing:.12em;text-transform:uppercase}
+h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:7px 0 0;letter-spacing:-.03em}
+.lead{max-width:650px;color:var(--muted)}
+.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.summary-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 8px 30px rgba(6,46,70,.06)}
+.summary-card .icon{font-size:29px}.summary-card b{display:block;margin:7px 0 4px}.summary-card p{margin:0;color:var(--muted);font-size:14px}
+.day-tabs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:25px}
+.day{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
+.day-head{padding:24px;background:linear-gradient(135deg,var(--navy),var(--deep));color:#fff}
+.day:nth-child(2) .day-head{background:linear-gradient(135deg,#0b7489,#18a5a0)}
+.day-label{font-size:13px;font-weight:900;letter-spacing:.12em;color:#9ce8ea}
+.day h3{font-size:27px;margin:5px 0 3px}.day-sub{color:rgba(255,255,255,.74)}
+.timeline{padding:14px 24px 24px}
+.item{display:grid;grid-template-columns:64px 1fr;gap:15px;padding:19px 0;border-bottom:1px dashed var(--line)}
+.item:last-child{border-bottom:0}.time{font-weight:900;color:var(--sea)}.item h4{margin:0 0 5px;font-size:18px}.item p{margin:0;color:var(--muted);font-size:14px}
+.note{margin-top:11px;padding:10px 12px;background:var(--sand);border-radius:12px;font-size:13px;color:#745b26}
+.feature-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:20px}
+.feature-main,.feature-side>div{border-radius:var(--radius);overflow:hidden;position:relative}
+.feature-main{
+  min-height:460px;color:#fff;padding:35px;display:flex;align-items:flex-end;
+  background:linear-gradient(160deg,rgba(4,39,58,.2),rgba(4,39,58,.9)),
+  radial-gradient(circle at 70% 15%,#8ee9df 0 12%,transparent 13%),
+  linear-gradient(135deg,#169cba,#063c5b);
+}
+.feature-main:before{content:"🐋";position:absolute;font-size:150px;right:8%;top:12%;opacity:.22;transform:rotate(-12deg)}
+.feature-main h3{font-size:36px;margin:8px 0}.feature-main p{color:rgba(255,255,255,.8);max-width:600px}
+.feature-side{display:grid;gap:20px}
+.feature-side>div{min-height:220px;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff}
+.beach{background:linear-gradient(145deg,rgba(3,67,85,.1),rgba(3,67,85,.85)),linear-gradient(135deg,#65d7e7,#f5c875)}
+.sunset{background:linear-gradient(145deg,rgba(61,30,35,.08),rgba(61,30,35,.84)),linear-gradient(135deg,#ffb46a,#e26f78)}
+.feature-side h3{margin:0 0 4px;font-size:25px}.feature-side p{margin:0;color:rgba(255,255,255,.82)}
+.options{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.option{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;position:relative}
+.badge{display:inline-block;padding:5px 9px;background:#e8f8f8;color:#08736f;border-radius:999px;font-size:12px;font-weight:900}
+.option h3{margin:14px 0 6px;font-size:22px}.option p,.option li{color:var(--muted);font-size:14px}.option ul{padding-left:20px;margin:12px 0 0}
+.option.recommended{border:2px solid var(--aqua);box-shadow:var(--shadow);transform:translateY(-6px)}
+.budget{background:var(--navy);color:#fff;border-radius:32px;padding:34px;display:grid;grid-template-columns:.8fr 1.2fr;gap:30px}
+.budget h2{margin-top:5px}.budget .lead{color:rgba(255,255,255,.68)}
+.costs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cost{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.11);padding:16px;border-radius:16px}
+.cost span{display:block;color:#9fd9df;font-size:13px}.cost b{font-size:19px}
+.small{font-size:12px;color:var(--muted)}
+.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.check{background:#fff;border:1px solid var(--line);padding:16px;border-radius:16px;display:flex;gap:12px;align-items:start}
+.tick{width:26px;height:26px;border-radius:9px;background:#ddf7f3;display:grid;place-items:center;flex:none;color:#08766e;font-weight:900}
+.mapbar{background:linear-gradient(135deg,#fff1cf,#ffe2d6);border-radius:28px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.mapbar h3{font-size:26px;margin:0 0 6px}.mapbar p{margin:0;color:#735d58}.map-actions{display:flex;flex-wrap:wrap;gap:10px}
+.map-btn{padding:11px 14px;background:#fff;border-radius:12px;font-weight:800;box-shadow:0 7px 20px rgba(90,52,40,.08)}
+footer{padding:42px 0 80px;text-align:center;color:var(--muted)}
+.sticky{
+  display:none;position:fixed;z-index:50;left:12px;right:12px;bottom:12px;padding:10px;
+  border-radius:18px;background:rgba(6,46,70,.94);backdrop-filter:blur(15px);box-shadow:0 15px 45px rgba(0,0,0,.25)
+}
+.sticky a{display:block;text-align:center;background:#fff;color:var(--navy);padding:12px;border-radius:12px;font-weight:900}
+@media(max-width:820px){
+  .navlinks{display:none}.hero{min-height:auto}.hero-grid{grid-template-columns:1fr;padding:46px 0 120px}.trip-card{transform:none}
+  .summary-grid{grid-template-columns:1fr 1fr}.day-tabs,.feature-grid,.budget{grid-template-columns:1fr}
+  .options{grid-template-columns:1fr}.option.recommended{transform:none}.section{padding:56px 0}.section-head{display:block}
+  .mapbar{align-items:flex-start;flex-direction:column}.sticky{display:block}footer{padding-bottom:100px}
+}
+@media(max-width:520px){
+  .wrap{width:min(100% - 22px,1120px)}h1{font-size:44px}.hero-copy{font-size:16px}
+  .trip-card{padding:15px;border-radius:22px}.poster{height:220px}.quick{gap:6px}.quick div{padding:10px 5px}
+  .summary-grid{grid-template-columns:1fr}.day-tabs{gap:14px}.day-head,.timeline{padding-left:18px;padding-right:18px}
+  .item{grid-template-columns:55px 1fr;gap:10px}.feature-main{min-height:390px;padding:25px}.feature-main h3{font-size:30px}
+  .costs,.checklist{grid-template-columns:1fr}.budget{padding:25px}.actions{flex-direction:column}.btn{width:100%}
+}
+@media print{
+  .nav,.actions,.sticky{display:none!important}.hero{min-height:auto}.hero-grid{padding:30px 0 80px}.section{padding:30px 0}
+  body{background:#fff}.day,.summary-card,.option{box-shadow:none}
+}
 </style>
 </head>
 <body>
-<h1>🌊 海生館親子2天1夜</h1>
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="#"><span class="brand-icon">🌊</span> FAMILY TRIP</a>
+      <div class="navlinks">
+        <a href="#plan">行程</a><a href="#highlights">亮點</a><a href="#stay">住宿</a><a href="#budget">預算</a><a href="#check">行前準備</a>
+      </div>
+    </nav>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">🐠 屏東・車城・後灣</div>
+        <h1>海生館親子<br>2 天 1 夜</h1>
+        <p class="hero-copy">不用把行程塞滿。第一天沉浸海洋世界，傍晚住進後灣；第二天留給陽光、沙灘與孩子真正想玩的海水。</p>
+        <div class="hero-tags">
+          <span>🚗 新北出發</span><span>👨‍👩‍👧‍👦 親子友善</span><span>🏖️ 沙灘戲水</span><span>🌅 後灣夕陽</span>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="#plan">查看完整行程 ↓</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=國立海洋生物博物館" target="_blank" rel="noopener">開啟 Google Maps</a>
+        </div>
+      </div>
+      <div class="trip-card">
+        <div class="poster">
+          <div class="sun">☀️</div><div class="fish">🐠</div><div class="island"></div>
+          <div class="poster-title">Ocean Weekend<br><small>親子海洋小旅行</small></div>
+        </div>
+        <div class="quick">
+          <div><strong>2 天</strong><small>慢旅行</small></div>
+          <div><strong>1 晚</strong><small>後灣住宿</small></div>
+          <div><strong>3 大亮點</strong><small>海洋・夕陽・沙灘</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="#fff" d="M0,64L80,74.7C160,85,320,107,480,101.3C640,96,800,64,960,53.3C1120,43,1280,53,1360,58.7L1440,64L1440,120L0,120Z"/></svg>
+</header>
 
-<div class="card">
-<h2>Day 1</h2>
-<ul>
-<li>新北出發</li>
-<li>車城午餐</li>
-<li>國立海洋生物博物館</li>
-<li>後灣住宿，欣賞夕陽</li>
-</ul>
-</div>
+<main>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="kicker">Trip at a glance</div><h2>這趟旅行，剛剛好的節奏</h2></div>
+      <p class="lead">避開「一直趕路」的家庭旅行疲勞，把最有記憶點的海生館、夕陽與戲水集中在同一區域。</p>
+    </div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="icon">🐋</div><b>深度逛海生館</b><p>保留至少 4～5 小時，不只走馬看花。</p></div>
+      <div class="summary-card"><div class="icon">🌇</div><b>住在後灣附近</b><p>減少移動，傍晚散步看夕陽。</p></div>
+      <div class="summary-card"><div class="icon">🏖️</div><b>第二天玩海</b><p>後灣或萬里桐，依浪況彈性選擇。</p></div>
+      <div class="summary-card"><div class="icon">🍜</div><b>餐食不繞路</b><p>以車城、恆春北側與住宿周邊為主。</p></div>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-<h2>Day 2（更新版）</h2>
-<ul>
-<li>早餐後前往後灣海灘／萬里桐海灘戲水</li>
-<li>沙灘玩沙、踏浪、親子戲水（注意潮汐與安全）</li>
-<li>附近海景餐廳午餐</li>
-<li>返回新北</li>
-</ul>
-<p><strong>已移除：</strong>恆春古城行程。</p>
-</div>
+<section class="section" id="plan">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="kicker">2-day itinerary</div><h2>完整時間軸</h2></div>
+      <p class="lead">時間可依孩子起床、塞車與天候前後調整 30～60 分鐘。</p>
+    </div>
+    <div class="day-tabs">
+      <article class="day">
+        <div class="day-head"><div class="day-label">DAY 01・海洋日</div><h3>新北 → 車城 → 海生館 → 後灣</h3><div class="day-sub">主題：海洋探索與夕陽散步</div></div>
+        <div class="timeline">
+          <div class="item"><div class="time">06:30</div><div><h4>新北出發</h4><p>建議提早上國道，途中安排 1～2 次休息；孩子可準備簡單早餐與車上娛樂。</p></div></div>
+          <div class="item"><div class="time">11:30</div><div><h4>車城午餐</h4><p>選擇綠豆蒜、洋蔥料理、海鮮或家常合菜，避免吃得太撐影響下午參觀。</p></div></div>
+          <div class="item"><div class="time">13:00</div><div><h4>國立海洋生物博物館</h4><p>依序安排台灣水域館、珊瑚王國館與世界水域館，穿插休息與餵食展示。</p><div class="note">親子重點：海底隧道、企鵝、白鯨／大型魚類展示，以及讓孩子自己選一個最喜歡的生物。</div></div></div>
+          <div class="item"><div class="time">17:30</div><div><h4>後灣入住與夕陽</h4><p>放下行李後到海邊走走，讓第一天以悠閒節奏收尾。</p></div></div>
+          <div class="item"><div class="time">19:00</div><div><h4>晚餐與早點休息</h4><p>可選住宿附近餐廳，或開車到車城／恆春北側用餐。</p></div></div>
+        </div>
+      </article>
+
+      <article class="day">
+        <div class="day-head"><div class="day-label">DAY 02・沙灘日</div><h3>後灣／萬里桐戲水 → 午餐 → 新北</h3><div class="day-sub">主題：玩沙、踏浪、家庭放空</div></div>
+        <div class="timeline">
+          <div class="item"><div class="time">08:00</div><div><h4>早餐與退房準備</h4><p>先確認當日天氣、風浪與潮汐，決定後灣或萬里桐。</p></div></div>
+          <div class="item"><div class="time">09:30</div><div><h4>親子海灘時間</h4><p>玩沙、踏浪、撿貝殼與拍照；若浪況不佳，只安排岸邊活動，不勉強下水。</p><div class="note">安全原則：穿防滑涉水鞋、兒童救生衣，避免單獨離岸，午後雷雨前提早離場。</div></div></div>
+          <div class="item"><div class="time">11:30</div><div><h4>沖洗與換裝</h4><p>準備大毛巾、乾衣袋與簡易沖洗水，讓返程舒服很多。</p></div></div>
+          <div class="item"><div class="time">12:30</div><div><h4>海景午餐</h4><p>選擇車城或恆春北側餐廳，避免再往墾丁大街繞行。</p></div></div>
+          <div class="item"><div class="time">14:00</div><div><h4>返回新北</h4><p>視路況安排休息站與晚餐；週日北返建議不要拖到太晚。</p></div></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="highlights">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="kicker">Highlights</div><h2>三個最值得記住的畫面</h2></div>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-main">
+        <div><div class="kicker" style="color:#9ff2ec">01・海生館</div><h3>把海底世界留給孩子慢慢看</h3><p>不要追求每個角落都走到，而是讓孩子找到自己真正有興趣的生物，留下「我最喜歡的是⋯⋯」的旅行記憶。</p></div>
+      </div>
+      <div class="feature-side">
+        <div class="sunset"><h3>02・後灣夕陽</h3><p>入住後不趕景點，只散步、吹風、看天色慢慢變化。</p></div>
+        <div class="beach"><h3>03・第二天玩海</h3><p>把孩子最期待的沙灘留到精神最好的上午。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="stay">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="kicker">Stay & beach</div><h2>住宿與戲水怎麼選</h2></div>
+      <p class="lead">以「離海生館近、停車方便、有沖洗空間」作為家庭住宿的優先條件。</p>
+    </div>
+    <div class="options">
+      <div class="option recommended"><span class="badge">最推薦</span><h3>後灣住宿</h3><p>行程最順，第一天離館後不用再長途開車，第二天起床就能接海灘。</p><ul><li>適合重視悠閒與海景</li><li>優先找親子房、停車位</li><li>確認是否可沖洗沙水</li></ul></div>
+      <div class="option"><span class="badge">沙灘首選</span><h3>後灣海灘</h3><p>距海生館近，適合踏浪、玩沙、散步與拍照。</p><ul><li>移動最少</li><li>適合低強度親子活動</li><li>仍需留意風浪與礁石</li></ul></div>
+      <div class="option"><span class="badge">備選</span><h3>萬里桐</h3><p>海景與潮間帶特色較強，可依當天海況與孩子年齡調整。</p><ul><li>景觀豐富</li><li>部分區域偏礁岩</li><li>涉水鞋更重要</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="budget">
+  <div class="wrap">
+    <div class="budget">
+      <div><div class="kicker" style="color:#8de8e0">Budget planner</div><h2>一家四口預算概念</h2><p class="lead">下列為規劃區間，不含個別購物；實際金額依日期、房型、車輛與票種而異。</p></div>
+      <div class="costs">
+        <div class="cost"><span>住宿 1 晚</span><b>NT$3,000～6,000</b></div>
+        <div class="cost"><span>門票與館內消費</span><b>NT$2,000～3,500</b></div>
+        <div class="cost"><span>餐食</span><b>NT$2,500～4,000</b></div>
+        <div class="cost"><span>油資、過路與停車</span><b>NT$2,000～3,500</b></div>
+      </div>
+    </div>
+    <p class="small">建議抓總預算約 NT$9,500～17,000，並另留 10% 彈性。票價與營業資訊請以出發前官方公告為準。</p>
+  </div>
+</section>
+
+<section class="section" id="check">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="kicker">Checklist</div><h2>行前準備清單</h2></div>
+      <p class="lead">這些小東西，會直接影響第二天玩海後返程的舒適度。</p>
+    </div>
+    <div class="checklist">
+      <div class="check"><div class="tick">✓</div><div><b>防曬與遮陽</b><div class="small">防曬乳、帽子、薄外套、太陽眼鏡</div></div></div>
+      <div class="check"><div class="tick">✓</div><div><b>玩水裝備</b><div class="small">泳衣、救生衣、涉水鞋、玩沙工具</div></div></div>
+      <div class="check"><div class="tick">✓</div><div><b>換洗與收納</b><div class="small">大毛巾、乾衣、濕衣袋、垃圾袋</div></div></div>
+      <div class="check"><div class="tick">✓</div><div><b>簡易沖洗</b><div class="small">瓶裝清水或可攜式沖洗器</div></div></div>
+      <div class="check"><div class="tick">✓</div><div><b>車程用品</b><div class="small">飲水、零食、暈車藥、充電線</div></div></div>
+      <div class="check"><div class="tick">✓</div><div><b>天候確認</b><div class="small">雨備、風浪、潮汐與雷雨預報</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="mapbar">
+      <div><h3>一鍵開啟旅程地圖</h3><p>海生館、後灣與萬里桐導航入口。</p></div>
+      <div class="map-actions">
+        <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=國立海洋生物博物館">🐋 海生館</a>
+        <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=後灣海灘">🌅 後灣</a>
+        <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=萬里桐">🏖️ 萬里桐</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Made for a slow, happy family weekend 🌊<br><span class="small">海況與開放資訊請於出發前再次確認。</span></div></footer>
+<div class="sticky"><a href="#plan">查看 2 天完整行程</a></div>
 </body>
 </html>
