@@ -135,7 +135,7 @@ export default function Home() {
       <header className="topbar">
         <a className="brand" href="#top" aria-label="Ocean Trip 首頁">
           <span className="brand-mark" aria-hidden="true">O</span>
-          <span>Family Ocean Trip</span>
+          <span>Family Ocean Trip V3.0</span>
         </a>
         <nav aria-label="主要導覽">
           {navItems.map(([label, id]) => <a href={`#${id}`} key={id}>{label}</a>)}
@@ -145,12 +145,17 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">FAMILY OCEAN TRIP · V2.0</p>
-          <h1>把兩天，<br />交給海。</h1>
-          <p className="hero-lead">從新北到屏東，一場看見企鵝、珊瑚與海底隧道的親子小旅行。<br />少一點趕路，多一點一起驚嘆。</p>
+          <p className="eyebrow">FAMILY TRIP INTELLIGENCE SYSTEM</p>
+          <h1>海生館親子<br />兩日計畫</h1>
+          <p className="hero-lead">新北 → 車城 → 海生館 → 恆春 → 海邊。<br />所有行程、提醒與預算已整合完成。</p>
+          <div className="trip-health" aria-label="行程狀態">
+            <div><span>行程狀態</span><strong>已就緒</strong></div>
+            <div><span>旅程天數</span><strong>2 Days</strong></div>
+            <div><span>規劃項目</span><strong>9 Stops</strong></div>
+          </div>
           <div className="hero-actions">
             <a className="primary-button" href="#day1">開始旅程 <span>↓</span></a>
-            <p><b>2</b> days　<b>9</b> stops　<b>1</b> family memory</p>
+            <p><b>Ready</b> · 旅前清單可離線保存</p>
           </div>
         </div>
         <div className="hero-orbit" aria-label="海洋動態視覺">
@@ -171,15 +176,15 @@ export default function Home() {
 
       <section className="intro section-shell" id="day1">
         <div className="section-heading">
-          <p className="eyebrow">THE ITINERARY</p>
-          <h2>順著潮汐，<br />走進兩日藍圖。</h2>
+          <p className="eyebrow">TRIP OVERVIEW</p>
+          <h2>兩日行程<br />一覽。</h2>
         </div>
-        <p className="section-note">每個停靠點都留一點空白，<br />讓意外成為旅程最好看的部分。</p>
+        <p className="section-note">資訊已依出發順序整理；<br />點選下方區塊即可快速查看。</p>
       </section>
 
       <section className="itinerary section-shell" aria-label="兩日行程">
-        <Timeline day="DAY 01 · INTO THE BLUE" items={itinerary.day1} />
-        <div id="day2"><Timeline day="DAY 02 · ISLAND SLOW" items={itinerary.day2} /></div>
+        <Timeline day="DAY 01 · SOUTHBOUND" items={itinerary.day1} />
+        <div id="day2"><Timeline day="DAY 02 · COASTAL SLOW" items={itinerary.day2} /></div>
       </section>
 
       <section className="attractions section-shell" id="attractions">
